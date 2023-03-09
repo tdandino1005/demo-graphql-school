@@ -3,12 +3,12 @@
   "main": "app/index.js",
   "type": "module",
   "scripts": {
-    "dep-graph": "depcruise --exclude \"^node_modules\" --output-type dot app | dot -T svg > dependency-graph.svg",
-    "test": "vitest"
+    "dep-graph": "depcruise --exclude \"^node_modules\" --output-type dot app | dot -T svg > dependency-graph.svg"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@graphql-eslint/eslint-plugin": "^3.16.1",
     "dependency-cruiser": "^12.5.1",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
@@ -17,7 +17,12 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
-    "prettier": "^2.7.1",
-    "vitest": "^0.29.2"
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
   }
 }
