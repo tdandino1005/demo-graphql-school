@@ -8,6 +8,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@babel/plugin-syntax-import-reflection": "^7.20.0",
     "@graphql-eslint/eslint-plugin": "^3.16.1",
     "dependency-cruiser": "^12.5.1",
     "eslint": "^8.34.0",
