@@ -3,7 +3,7 @@ import ClassModel from "./index.js";
 
 const controller = {
   index() {
-    return ClassModel.find({});
+    return ClassModel.find({}).populate("professor");
   },
   updateClassBuilding(id, newBuilding) {
     return ClassModel.findByIdAndUpdate(id, { building: newBuilding });
@@ -11,14 +11,5 @@ const controller = {
 };
 
 await initConn();
-
-controller
-  .index()
-  .then((classes) => {
-    console.log(classes);
-  })
-  .catch((err) => {
-    console.error(err.message);
-  });
 
 export default controller;
