@@ -1,4 +1,3 @@
-import initConn from "../conn.js";
 import ClassModel from "./index.js";
 
 const controller = {
@@ -9,7 +8,5 @@ const controller = {
     return ClassModel.findByIdAndUpdate(id, { building: newBuilding });
   },
 };
-
-await initConn();
 
 export default controller;
