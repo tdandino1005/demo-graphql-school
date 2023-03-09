@@ -6,6 +6,7 @@ export default {
   mongooseSchemaOptions: {
     new: true,
     runValidators: true,
+    strict: "throw",
     versionKey: false,
   },
   mongoURL: process.env.MONGO_URL,
