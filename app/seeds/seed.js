@@ -53,11 +53,6 @@ conn.once("open", async () => {
     conn.close();
   }
 });
-import ClassModel from "../class/index.js";
-import initConn, { conn } from "../conn.js";
-import ProfessorModel from "../professor/index.js";
-import SchoolModel from "../school/index.js";
-import data from "./data.json" assert { type: "json" };
 
 function getRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length);
