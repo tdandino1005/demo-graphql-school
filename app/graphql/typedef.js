@@ -5,13 +5,14 @@ const typeDefs = gql`
     "Get all the classes. If there are no classes, return an empty array."
     indexClasses: [Class]!
   }
-  "A class in our school."
+  "A class in our 🏫."
   type Class {
-    "The unique identifier for the class. thsi is a MongoDB ObjectID"
+    "The unique identifier for the class. This is a MongoDB ID."
     _id: ID!
-    name: String!
     "The name of the class."
+    name: String!
     building: String!
+    "The number of credit hours for the class."
     creditHours: Int!
   }
 `;
