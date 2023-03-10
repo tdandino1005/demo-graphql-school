@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 import config from "./config.js";
 
-const initConn = async () => {
+const init = async () => {
   mongoose
     .connect(`${config.mongoURL}/school`)
     .then(() => {
@@ -15,4 +15,4 @@ const initConn = async () => {
 
 export const conn = mongoose.connection;
 
-export default initConn;
+export default init;

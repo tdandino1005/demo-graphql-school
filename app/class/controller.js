@@ -1,5 +1,7 @@
 import ClassModel from "./index.js";
 
+// TODO: Improve this 💩
+
 const controller = {
   index() {
     return ClassModel.find({}).populate("professor");
