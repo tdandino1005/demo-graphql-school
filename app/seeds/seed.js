@@ -7,7 +7,7 @@ import data from "./data.json" assert { type: "json" };
 function getRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length);
 }
-
+// conn
 await initConn();
 
 conn.once("open", async () => {
