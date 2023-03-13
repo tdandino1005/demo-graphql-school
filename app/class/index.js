@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { model, Schema } from "mongoose";
 import config from "../config.js";
 
 const classSchema = new Schema(
