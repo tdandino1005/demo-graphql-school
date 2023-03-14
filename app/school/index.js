@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { model, Schema } from "mongoose";
 import config from "../config.js";
 
 const schoolSchema = new Schema(
@@ -15,7 +15,7 @@ const schoolSchema = new Schema(
     },
     studentCount: {
       type: Number,
-      required: true,
+      default: 0,
     },
     classes: [
       {
