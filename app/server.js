@@ -4,8 +4,10 @@ import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHt
 import cors from "cors";
 import express from "express";
 import http from "http";
-
+import config from "./config.js";
 import { resolvers, typeDefs } from "./graphql/index.js";
+
+const { port } = config;
 
 const app = express();
 
@@ -26,12 +28,13 @@ async function init() {
   await server.start();
 
   // Specify the path where we'd like to mount our server
+  // `cors` allows a detached front-end to make requests to our server
   app.use("/", cors(), express.json(), expressMiddleware(server));
 
   // Modified server startup
-  await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+  await new Promise((resolve) => httpServer.listen({ port }, resolve));
 
-  console.info(`🚀 Server ready at http://localhost:4000/`);
+  console.info(`🚀 Server ready at http://localhost:${port}/`);
 }
 
 export default init;
