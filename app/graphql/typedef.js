@@ -17,6 +17,7 @@ const typeDefs = gql`
     "Move a class to a new building."
     updateClassBuilding(_id: ID!, newBuilding: String!): Class
   }
+
   "A school in our 🏫."
   type School {
     _id: ID!

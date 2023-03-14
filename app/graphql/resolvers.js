@@ -23,6 +23,15 @@ const resolvers = {
       return await classController.show(args._id);
     },
   },
+
+  Mutation: {
+    async createSchool(_, { name, location, studentCount }) {
+      return await schoolController.create({ name, location, studentCount });
+    },
+    async updateClassBuilding(_, { _id, newBuilding }) {
+      return await classController.updateClassBuilding(_id, newBuilding);
+    },
+  },
 };
 
 export default resolvers;
