@@ -15,6 +15,9 @@ const resolvers = {
     async Schools() {
       return await schoolController.index();
     },
+    async class(_, args) {
+      return await classController.show(args._id);
+    },
   },
 };
 

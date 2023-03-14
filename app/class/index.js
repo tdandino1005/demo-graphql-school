@@ -1,5 +1,6 @@
 import { model, Schema } from "mongoose";
 import config from "../config.js";
+import Professor from "../professor/index.js";
 
 const classSchema = new Schema(
   {
@@ -19,7 +20,7 @@ const classSchema = new Schema(
     },
     professor: {
       type: Schema.Types.ObjectId,
-      ref: "Professor",
+      ref: Professor.modelName,
     },
   },
   config.mongooseSchemaOptions
