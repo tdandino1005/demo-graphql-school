@@ -23,7 +23,7 @@ const resolvers = {
       return await classController.show(args._id);
     },
   },
-
+  // Mutations are used to create, update, or delete data.
   Mutation: {
     async createSchool(_, { name, location, studentCount }) {
       return await schoolController.create({ name, location, studentCount });
